@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+/* Import the Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Resetting some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's width/height */
+}
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Using the modern, clean 'Roboto' font */
+    background-color: #f0f8ff; /* Light blue background color */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container for the weather forecast boxes */
+.div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Adds space between each box */
+    padding: 20px;
+    max-width: 1200px; /* Limits the maximum width of the grid */
+    width: 100%; /* Makes the grid responsive */
+}
+
+/* Individual weather forecast box */
+.box {
+    background-color: #ffffff; /* White background for each box */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to give depth */
+    text-align: center;
+    transition: transform 0.3s; /* Smooth transition on hover */
+}
+
+/* Hover effect for each box */
+.box:hover {
+    transform: translateY(-10px); /* Slightly lifts the box on hover */
+}
+
+/* Main day and temperature heading */
+h1 {
+    font-size: 1.6rem; /* Larger font size for the day and temperature */
+    color: #333; /* Dark gray text color */
+    font-weight: 500; /* Semi-bold text for emphasis */
+    margin-bottom: 10px; /* Adds space below the heading */
+}
+
+/* Styling for the sun icon (for weather condition) */
+.k {
+    margin: 10px 0; /* Adds vertical space around the sun icon */
+}
+
+.sun {
+    width: 50px;
+    height: 50px;
+    background-color: #ffcc00; /* Bright yellow color for the sun */
+    border-radius: 50%; /* Makes it a perfect circle */
+    margin: 0 auto; /* Centers the sun horizontally */
+    position: relative;
+    top: 10px; /* Positions the sun slightly down */
+}
+
+/* Styling for the secondary temperature text */
+h1 + h1 {
+    font-size: 1.2rem; /* Slightly smaller font size for the secondary text */
+    color: #777; /* Lighter gray color */
+}
+
+/* Responsive design for medium screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+    .div {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Stacks boxes more compactly */
+    }
+
+    h1 {
+        font-size: 1.4rem; /* Slightly smaller text on medium screens */
+    }
+
+    h1 + h1 {
+        font-size: 1rem; /* Reduces size of the second temperature */
+    }
+}
+
+/* Responsive design for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 480px) {
+    .div {
+        grid-template-columns: 1fr; /* Stacks the boxes in one column */
+    }
+
+    h1 {
+        font-size: 1.2rem; /* Further reduce text size for small screens */
+    }
+
+    h1 + h1 {
+        font-size: 0.9rem; /* Even smaller font for secondary text */
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="div">
+        
+        <div class="box"><h1>Monday</h1><div class="k"><div class="sun"></div></div><h1>28 / 21 °C</h1></div>
+        <div class="box"><h1>Tuesday</h1><div class="k"><div class="sun"></div></div><h1>	29 / 16 °C</h1></div>
+        <div class="box"><h1>Wednesday</h1><div class="k"><div class="sun"></div></div><h1>30 / 17 °C</h1></div>
+        <div class="box"><h1>Thursday</h1><div class="k"><div class="sun"></div></div><h1>30 / 17 °C</h1></div>
+        <div class="box"><h1>Friday</h1><div class="k"><div class="sun"></div></div><h1>31 / 21 °C</h1></div>
+        <div class="box"><h1>Saturday</h1><div class="k"><div class="sun"></div></div><h1>32 / 22 °C</h1></div>
+        <div class="box"><h1>Sunday</h1><div class="k"><div class="sun"></div></div><h1>32 / 22 °C</h1></div>
+        <div class="box"><h1>Monday</h1><div class="k"><div class="sun"></div></div><h1>32 / 22 °C</h1></div>
+        <div class="box"><h1>Tuesday</h1><div class="k"><div class="sun"></div></div><h1>32 / 22 °C</h1></div>
+        <div class="box"><h1>Wednesday</h1><div class="k"><div class="sun"></div></div><h1>	32 / 22 °C</h1></div>
+
+    </div>
+</body>
+</html>
